@@ -8,7 +8,10 @@ router__client.get("/client", async (_req: Request, _res: Response) => {
   _res.json(response);
 });
 router__client.get("/client/:id", async (_req: Request, _res: Response) => {
-  _res.json("Lista completa de clietes");
+  const client = new Client();
+  const idClient = _req.params.id;
+  const response = await client.getClientById(Number(idClient));
+  _res.json(response);
 });
 router__client.put("/client", async (_req: Request, _res: Response) => {
   _res.json("Lista completa de clietes");

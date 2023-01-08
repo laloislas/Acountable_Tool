@@ -1,4 +1,4 @@
-interface Client {
+export default interface Client__Interface {
   idClient: number;
   name: string;
   rfc: string;
